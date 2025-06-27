@@ -163,7 +163,7 @@ export default function ExplorePage() {
 
           {/* Importance Slider */}
           <div className="mb-6">
-            <ImportanceSlider value={threshold} onChange={setThreshold} />
+            <ImportanceSlider initialValue={threshold} onChange={setThreshold} />
           </div>
         </div>
 

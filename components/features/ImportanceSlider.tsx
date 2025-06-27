@@ -8,7 +8,7 @@ interface ImportanceSliderProps {
   onChange: (value: number) => void
 }
 
-export function ImportanceSlider({ initialValue, onChange }: ImportanceSliderProps) {
+export default function ImportanceSlider({ initialValue, onChange }: ImportanceSliderProps) {
   const [value, setValue] = useState(initialValue)
   const [saving, setSaving] = useState(false)
   
