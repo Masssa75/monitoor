@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "MONITOOR - Twitter Monitoring for Crypto",
-  description: "Stay updated with important tweets from your favorite crypto projects",
+  description: "Monitor important crypto tweets with AI-powered filtering. Try without signup!",
 };
 
 export default function RootLayout({
