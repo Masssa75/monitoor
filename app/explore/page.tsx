@@ -201,7 +201,7 @@ export default function ExplorePage() {
         <div className="sticky bottom-0 bg-gradient-to-t from-[#0f0f23] to-transparent p-6">
           <button
             onClick={handleTelegramConnect}
-            className="w-full bg-blue-500 bg-opacity-20 border border-blue-500 text-blue-400 py-3 rounded-lg backdrop-blur hover:bg-opacity-30 transition-all"
+            className="w-full bg-blue-500 bg-opacity-20 border border-blue-500 text-white py-3 rounded-lg backdrop-blur hover:bg-opacity-30 transition-all"
           >
             Sign Up to Save & Get Notifications
           </button>
