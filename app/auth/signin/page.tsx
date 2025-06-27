@@ -36,14 +36,17 @@ export default function SignInPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-950 text-white flex items-center justify-center">
-      <div className="w-full max-w-md px-4">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mb-2">Welcome back</h1>
-          <p className="text-slate-400">Sign in to your account</p>
+    <div className="min-h-screen bg-gradient-to-br from-[#0f0f23] to-[#1e1e3f] text-white flex flex-col">
+      <div className="flex-1 flex flex-col p-6 max-w-md mx-auto w-full">
+        {/* Header */}
+        <div className="mb-12 mt-12">
+          <Link href="/explore" className="text-gray-400 text-sm mb-6 inline-block">← Back to Explore</Link>
+          <h1 className="text-xl font-light mb-2">Welcome back</h1>
+          <p className="text-sm text-gray-400">Sign in to your account</p>
         </div>
 
-        <form onSubmit={handleSignIn} className="space-y-6">
+        <form onSubmit={handleSignIn} className="flex-1 flex flex-col">
+          <div className="space-y-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
               Email
@@ -54,7 +57,7 @@ export default function SignInPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder="you@example.com"
             />
           </div>
@@ -69,30 +72,39 @@ export default function SignInPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors"
               placeholder="••••••••"
             />
           </div>
 
-          {error && (
-            <div className="bg-red-500/10 border border-red-500 text-red-400 px-4 py-2 rounded-lg text-sm">
-              {error}
-            </div>
-          )}
+            {error && (
+              <div className="bg-red-500/10 border border-red-500 text-red-400 px-4 py-2 rounded-lg text-sm">
+                {error}
+              </div>
+            )}
+          </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {loading ? 'Signing in...' : 'Sign in'}
-          </button>
+          <div className="mt-auto space-y-4">
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-blue-500 text-white py-4 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-600 transition-colors"
+            >
+              {loading ? 'Signing in...' : 'Sign in'}
+            </button>
+          </div>
         </form>
 
         <p className="text-center mt-6 text-slate-400">
           Don't have an account?{' '}
           <Link href="/auth/signup" className="text-blue-400 hover:text-blue-300">
             Sign up
+          </Link>
+        </p>
+        
+        <p className="text-center mt-4 text-slate-400">
+          <Link href="/explore" className="text-blue-400 hover:text-blue-300">
+            Explore without account
           </Link>
         </p>
       </div>

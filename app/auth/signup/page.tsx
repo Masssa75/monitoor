@@ -43,7 +43,7 @@ export default function SignUpPage() {
       <div className="flex-1 flex flex-col p-6 max-w-md mx-auto w-full">
         {/* Header */}
         <div className="mb-12 mt-12">
-          <Link href="/" className="text-gray-400 text-sm mb-6 inline-block">← Back</Link>
+          <Link href="/explore" className="text-gray-400 text-sm mb-6 inline-block">← Back to Explore</Link>
           <h1 className="text-xl font-light mb-2">Create Account</h1>
           <p className="text-sm text-gray-400">Start monitoring in seconds</p>
         </div>
@@ -96,6 +96,12 @@ export default function SignUpPage() {
               Already have an account?{' '}
               <Link href="/auth/signin" className="text-blue-400 hover:text-blue-300">
                 Sign in
+              </Link>
+            </p>
+            
+            <p className="text-center text-sm text-gray-500">
+              <Link href="/explore" className="hover:text-gray-400">
+                Continue exploring without account →
               </Link>
             </p>
           </div>

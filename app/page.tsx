@@ -34,7 +34,7 @@ export default function Home() {
 
           {/* CTA */}
           <Link 
-            href="/auth/signup"
+            href="/explore"
             className="block w-full bg-blue-500 bg-opacity-10 border border-blue-500 text-blue-400 py-4 font-light backdrop-blur text-center hover:bg-opacity-20 transition-all"
           >
             Start Monitoring
