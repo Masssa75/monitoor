@@ -7,13 +7,3 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-  conditions = {Role = ["admin"]}
-  force = false
-
-[functions]
-  directory = ".netlify/functions"
