@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONITOOR - Mobile Landing Page Options</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .phone-frame { 
+            width: 375px; 
+            height: 812px; 
+            margin: 20px; 
+            border: 8px solid #1f2937; 
+            border-radius: 40px; 
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .crypto-gradient { background: linear-gradient(135deg, #ff7b7b 0%, #667eea 50%, #764ba2 100%); }
+        .green-gradient { background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%); }
+        .dark-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%); }
+        .orange-gradient { background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%); }
+        .blue-gradient { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+        
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(255,255,255,0.3); }
+            50% { border-color: rgba(255,255,255,0.8); }
+        }
+        .pulse-border { animation: pulse-border 2s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">MONITOOR Mobile Landing Page</h1>
+        <p class="text-gray-600">6 Different Design Options - Phone First</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center">
+        
+        <!-- Option 1: Minimal Clean -->
+        <div class="phone-frame bg-white">
+            <div class="h-full flex flex-col p-6">
+                <!-- Header -->
+                <div class="text-center mb-8 mt-8">
+                    <div class="w-16 h-16 bg-blue-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-900 mb-2">MONITOOR</h1>
+                    <p class="text-gray-600 text-sm">Never miss important crypto updates</p>
+                </div>
+
+                <!-- Main Content -->
+                <div class="flex-1 space-y-6">
+                    <div class="text-center">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-3">Stay Ahead of the Market</h2>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Get instant notifications for the crypto projects you care about. 
+                            AI-powered importance scoring ensures you only see what matters.
+                        </p>
+                    </div>
+
+                    <!-- Feature List -->
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 text-sm">10 top crypto projects</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 text-sm">AI importance scoring</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 text-sm">Telegram notifications</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="space-y-3">
+                    <button class="w-full bg-blue-500 text-white py-4 rounded-xl font-medium">
+                        Get Started Free
+                    </button>
+                    <p class="text-center text-xs text-gray-500">No credit card required</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 2: Crypto Themed -->
+        <div class="phone-frame crypto-gradient">
+            <div class="h-full flex flex-col p-6 text-white">
+                <!-- Header -->
+                <div class="text-center mb-8 mt-8">
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-3xl mx-auto mb-4 flex items-center justify-center backdrop-blur-sm">
+                        <div class="text-2xl font-bold">📊</div>
+                    </div>
+                    <h1 class="text-2xl font-bold mb-2">MONITOOR</h1>
+                    <p class="text-white text-opacity-80 text-sm">Crypto Intelligence at Your Fingertips</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-2 gap-3 mb-8">
+                    <div class="bg-white bg-opacity-20 rounded-2xl p-4 backdrop-blur-sm">
+                        <div class="text-2xl font-bold mb-1">10</div>
+                        <div class="text-xs text-white text-opacity-80">Projects</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-2xl p-4 backdrop-blur-sm">
+                        <div class="text-2xl font-bold mb-1">24/7</div>
+                        <div class="text-xs text-white text-opacity-80">Monitoring</div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="flex-1">
+                    <h2 class="text-xl font-semibold mb-4">Never Miss Alpha</h2>
+                    <p class="text-white text-opacity-90 text-sm leading-relaxed mb-6">
+                        Track Bitcoin, Ethereum, Solana and 7 other top projects. 
+                        Our AI filters the noise, delivering only high-impact updates to your Telegram.
+                    </p>
+
+                    <!-- Crypto Icons -->
+                    <div class="flex justify-center space-x-3 mb-8">
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold">₿</div>
+                        <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-xs font-bold">Ξ</div>
+                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-xs font-bold">◎</div>
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-xs font-bold">K</div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="space-y-3">
+                    <button class="w-full bg-white text-gray-900 py-4 rounded-xl font-semibold">
+                        Start Monitoring
+                    </button>
+                    <p class="text-center text-xs text-white text-opacity-70">Join 1000+ crypto enthusiasts</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 3: Dark Mode Premium -->
+        <div class="phone-frame dark-gradient">
+            <div class="h-full flex flex-col p-6 text-white">
+                <!-- Header -->
+                <div class="flex justify-between items-center mb-8 mt-8">
+                    <div>
+                        <h1 class="text-xl font-bold">MONITOOR</h1>
+                        <p class="text-gray-400 text-xs">Pro Monitoring</p>
+                    </div>
+                    <div class="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Live Feed Preview -->
+                <div class="bg-gray-800 rounded-2xl p-4 mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs text-gray-400">LIVE FEED</span>
+                        <div class="flex items-center space-x-1">
+                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span class="text-xs text-green-500">ACTIVE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center text-xs font-bold">₿</div>
+                            <div class="flex-1">
+                                <div class="text-sm text-white">Bitcoin Core Update</div>
+                                <div class="text-xs text-gray-400">2m ago • Score: 9/10</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-gray-600 rounded-lg flex items-center justify-center text-xs font-bold">Ξ</div>
+                            <div class="flex-1">
+                                <div class="text-sm text-white">Ethereum Merge News</div>
+                                <div class="text-xs text-gray-400">5m ago • Score: 8/10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="flex-1 space-y-4">
+                    <h2 class="text-lg font-semibold">Professional Grade Monitoring</h2>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-1 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="text-gray-300">Real-time Twitter analysis</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-1 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="text-gray-300">AI-powered importance scoring</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-1 h-1 bg-yellow-500 rounded-full"></div>
+                            <span class="text-gray-300">Instant Telegram alerts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <button class="w-full bg-yellow-500 text-black py-4 rounded-xl font-semibold">
+                    Access Dashboard
+                </button>
+            </div>
+        </div>
+
+        <!-- Option 4: Feed-First Design -->
+        <div class="phone-frame bg-gray-50">
+            <div class="h-full flex flex-col">
+                <!-- Header -->
+                <div class="bg-white p-4 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h1 class="text-lg font-bold text-gray-900">MONITOOR</h1>
+                            <p class="text-xs text-gray-500">Crypto News Feed</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full float"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="bg-white p-4 border-b border-gray-200">
+                    <div class="flex justify-between text-center">
+                        <div>
+                            <div class="text-lg font-bold text-gray-900">23</div>
+                            <div class="text-xs text-gray-500">Today</div>
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold text-blue-600">9/10</div>
+                            <div class="text-xs text-gray-500">Min Score</div>
+                        </div>
+                        <div>
+                            <div class="text-lg font-bold text-green-600">5</div>
+                            <div class="text-xs text-gray-500">Projects</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feed Preview -->
+                <div class="flex-1 p-4 space-y-4">
+                    <div class="bg-white rounded-2xl p-4 shadow-sm">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center text-white font-bold">₿</div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-900">Bitcoin</span>
+                                    <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">Score: 9</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Major institutional adoption announcement expected this week...</p>
+                                <div class="text-xs text-gray-400 mt-2">3 minutes ago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 shadow-sm">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-purple-500 rounded-xl flex items-center justify-center text-white font-bold">◎</div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm font-medium text-gray-900">Solana</span>
+                                    <span class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full">Score: 8</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Network upgrade brings 50% performance improvements...</p>
+                                <div class="text-xs text-gray-400 mt-2">7 minutes ago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-sm text-gray-500 mb-4">Sign up to see full feed</p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="p-4">
+                    <button class="w-full bg-blue-500 text-white py-4 rounded-xl font-medium">
+                        Start Following Projects
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 5: Gamified Approach -->
+        <div class="phone-frame green-gradient">
+            <div class="h-full flex flex-col p-6 text-white">
+                <!-- Header -->
+                <div class="text-center mb-6 mt-8">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl mx-auto mb-4 flex items-center justify-center backdrop-blur-sm pulse-border border-2">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h1 class="text-2xl font-bold mb-2">MONITOOR</h1>
+                    <p class="text-white text-opacity-80 text-sm">Level Up Your Crypto Game</p>
+                </div>
+
+                <!-- Achievement Style -->
+                <div class="bg-white bg-opacity-20 rounded-3xl p-5 mb-6 backdrop-blur-sm">
+                    <div class="text-center mb-4">
+                        <div class="text-3xl font-bold mb-1">Level 1</div>
+                        <div class="text-sm text-white text-opacity-80">Crypto Scout</div>
+                    </div>
+                    
+                    <div class="w-full bg-white bg-opacity-20 rounded-full h-2 mb-3">
+                        <div class="bg-white rounded-full h-2" style="width: 30%"></div>
+                    </div>
+                    
+                    <div class="text-center text-sm text-white text-opacity-90">
+                        Track 5 projects to reach Level 2
+                    </div>
+                </div>
+
+                <!-- Mission Board -->
+                <div class="flex-1">
+                    <h2 class="text-lg font-semibold mb-4">Daily Missions</h2>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between bg-white bg-opacity-10 rounded-xl p-3 backdrop-blur-sm">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-green-400 rounded-lg flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-sm">Connect Telegram</span>
+                            </div>
+                            <span class="text-xs text-yellow-300">+50 XP</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between bg-white bg-opacity-10 rounded-xl p-3 backdrop-blur-sm">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-gray-400 rounded-lg flex items-center justify-center">
+                                    <span class="text-xs text-white">○</span>
+                                </div>
+                                <span class="text-sm">Follow 3 projects</span>
+                            </div>
+                            <span class="text-xs text-yellow-300">+100 XP</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between bg-white bg-opacity-10 rounded-xl p-3 backdrop-blur-sm">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-gray-400 rounded-lg flex items-center justify-center">
+                                    <span class="text-xs text-white">○</span>
+                                </div>
+                                <span class="text-sm">Read 5 updates</span>
+                            </div>
+                            <span class="text-xs text-yellow-300">+75 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="space-y-3">
+                    <button class="w-full bg-white text-green-600 py-4 rounded-xl font-semibold">
+                        Begin Your Journey
+                    </button>
+                    <p class="text-center text-xs text-white text-opacity-70">Unlock achievements as you learn</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 6: Minimalist Focus -->
+        <div class="phone-frame bg-white">
+            <div class="h-full flex flex-col justify-center p-8">
+                <!-- Centered Content -->
+                <div class="text-center space-y-8">
+                    <div>
+                        <div class="w-24 h-24 bg-black rounded-3xl mx-auto mb-6 flex items-center justify-center">
+                            <span class="text-white text-3xl font-light">M</span>
+                        </div>
+                        <h1 class="text-3xl font-light text-gray-900 mb-3">MONITOOR</h1>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            The essential crypto monitoring tool
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="text-gray-800">
+                            <div class="text-4xl font-light mb-2">10</div>
+                            <div class="text-sm text-gray-500">Curated Projects</div>
+                        </div>
+                        
+                        <div class="w-full h-px bg-gray-200"></div>
+                        
+                        <div class="text-gray-800">
+                            <div class="text-4xl font-light mb-2">AI</div>
+                            <div class="text-sm text-gray-500">Smart Filtering</div>
+                        </div>
+                        
+                        <div class="w-full h-px bg-gray-200"></div>
+                        
+                        <div class="text-gray-800">
+                            <div class="text-4xl font-light mb-2">24/7</div>
+                            <div class="text-sm text-gray-500">Instant Alerts</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <button class="w-full bg-black text-white py-5 rounded-none font-light text-lg">
+                            START
+                        </button>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Free • No Setup Required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation between options -->
+    <div class="text-center mt-8 space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">6 Design Options Summary:</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto text-sm">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="font-medium text-blue-600 mb-2">Option 1: Minimal Clean</div>
+                <p class="text-gray-600">Simple, professional, feature-focused</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="font-medium text-purple-600 mb-2">Option 2: Crypto Themed</div>
+                <p class="text-gray-600">Gradient background, crypto icons, stats</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="font-medium text-yellow-600 mb-2">Option 3: Dark Premium</div>
+                <p class="text-gray-600">Dark mode, live feed preview, pro feel</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="font-medium text-blue-600 mb-2">Option 4: Feed-First</div>
+                <p class="text-gray-600">Shows actual tweets, feed preview</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="font-medium text-green-600 mb-2">Option 5: Gamified</div>
+                <p class="text-gray-600">Levels, missions, achievements</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="font-medium text-gray-800 mb-2">Option 6: Ultra Minimal</div>
+                <p class="text-gray-600">Pure simplicity, focused message</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

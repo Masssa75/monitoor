@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONITOOR - Complete App Wireframes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .phone-frame { 
+            width: 375px; 
+            height: 812px; 
+            margin: 20px; 
+            border: 8px solid #1f2937; 
+            border-radius: 40px; 
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .midnight-gradient { background: linear-gradient(135deg, #0f0f23 0%, #1e1e3f 100%); }
+        .status-bar {
+            height: 44px;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 12px;
+        }
+        .slider-track {
+            background: linear-gradient(to right, #1e1e3f 0%, #3b82f6 100%);
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+        .pulse { animation: pulse 2s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">MONITOOR - Complete App Wireframes</h1>
+        <p class="text-gray-600">Full user journey from landing to active monitoring</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center">
+        
+        <!-- 1. Landing Page (Already Designed) -->
+        <div class="phone-frame midnight-gradient">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            <div class="h-full flex flex-col justify-center p-10 text-white">
+                <div class="space-y-16">
+                    <!-- Logo Mark -->
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-8 relative">
+                            <div class="absolute inset-0 bg-blue-500 opacity-20 rounded-xl blur-xl"></div>
+                            <div class="relative w-full h-full border border-blue-400 rounded-xl flex items-center justify-center">
+                                <span class="text-blue-400 text-xl font-light">M</span>
+                            </div>
+                        </div>
+                        <h1 class="text-2xl font-light tracking-widest">MONITOOR</h1>
+                    </div>
+
+                    <!-- Value Props -->
+                    <div class="space-y-8 text-center">
+                        <div>
+                            <div class="text-6xl font-thin text-blue-400 mb-2">•</div>
+                            <p class="text-sm text-gray-400 font-light">Ten curated projects</p>
+                        </div>
+                        <div>
+                            <div class="text-6xl font-thin text-blue-400 mb-2">••</div>
+                            <p class="text-sm text-gray-400 font-light">AI-powered filtering</p>
+                        </div>
+                        <div>
+                            <div class="text-6xl font-thin text-blue-400 mb-2">•••</div>
+                            <p class="text-sm text-gray-400 font-light">Instant notifications</p>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <button class="w-full bg-blue-500 bg-opacity-10 border border-blue-500 text-blue-400 py-4 font-light backdrop-blur">
+                        Start Monitoring
+                    </button>
+                </div>
+            </div>
+            <div class="text-center pb-4">
+                <p class="text-xs text-gray-600">1. Landing Page</p>
+            </div>
+        </div>
+
+        <!-- 2. Sign Up -->
+        <div class="phone-frame midnight-gradient">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            <div class="h-full flex flex-col p-6 text-white">
+                <!-- Back Button -->
+                <div class="mb-8">
+                    <button class="text-blue-400 text-sm">← Back</button>
+                </div>
+
+                <!-- Header -->
+                <div class="text-center mb-12">
+                    <div class="w-12 h-12 mx-auto mb-4 border border-blue-400 rounded-lg flex items-center justify-center">
+                        <span class="text-blue-400 text-sm">M</span>
+                    </div>
+                    <h1 class="text-2xl font-light mb-2">Create Account</h1>
+                    <p class="text-sm text-gray-400">Start monitoring in seconds</p>
+                </div>
+
+                <!-- Form -->
+                <div class="flex-1 space-y-6">
+                    <div>
+                        <label class="text-xs text-gray-400 mb-2 block">EMAIL</label>
+                        <input type="email" placeholder="you@example.com" 
+                               class="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-blue-400 focus:outline-none">
+                    </div>
+                    
+                    <div>
+                        <label class="text-xs text-gray-400 mb-2 block">PASSWORD</label>
+                        <input type="password" placeholder="••••••••" 
+                               class="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-blue-400 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-400 mb-2 block">CONFIRM PASSWORD</label>
+                        <input type="password" placeholder="••••••••" 
+                               class="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-blue-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="space-y-4">
+                    <button class="w-full bg-blue-500 text-white py-4 rounded-lg font-medium">
+                        Create Account
+                    </button>
+                    <p class="text-center text-sm text-gray-400">
+                        Already have an account? <a href="#" class="text-blue-400">Sign in</a>
+                    </p>
+                </div>
+            </div>
+            <div class="text-center pb-4">
+                <p class="text-xs text-gray-600">2. Sign Up</p>
+            </div>
+        </div>
+
+        <!-- 3. Project Selection -->
+        <div class="phone-frame midnight-gradient">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            <div class="h-full flex flex-col p-6 text-white">
+                <!-- Header -->
+                <div class="mb-6">
+                    <h1 class="text-xl font-light mb-2">Select Projects</h1>
+                    <p class="text-sm text-gray-400">Choose what to monitor</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="mb-4">
+                    <div class="relative">
+                        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                        <input type="text" placeholder="Search projects..." 
+                               class="w-full bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none">
+                    </div>
+                </div>
+
+                <!-- Selected Count -->
+                <div class="bg-blue-500 bg-opacity-10 border border-blue-500 rounded-lg p-3 mb-6">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-blue-400">Selected projects</span>
+                        <span class="text-lg font-medium text-blue-400">3/10</span>
+                    </div>
+                </div>
+
+                <!-- Project List -->
+                <div class="flex-1 space-y-3 overflow-y-auto">
+                    <!-- Bitcoin - Selected -->
+                    <div class="flex items-center justify-between bg-blue-500 bg-opacity-10 border border-blue-500 rounded-xl p-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold">₿</div>
+                            <div>
+                                <div class="font-medium">Bitcoin</div>
+                                <div class="text-xs text-gray-400">BTC</div>
+                            </div>
+                        </div>
+                        <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Ethereum - Selected -->
+                    <div class="flex items-center justify-between bg-blue-500 bg-opacity-10 border border-blue-500 rounded-xl p-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-white font-bold">Ξ</div>
+                            <div>
+                                <div class="font-medium">Ethereum</div>
+                                <div class="text-xs text-gray-400">ETH</div>
+                            </div>
+                        </div>
+                        <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Solana - Not Selected -->
+                    <div class="flex items-center justify-between bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl p-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold">◎</div>
+                            <div>
+                                <div class="font-medium">Solana</div>
+                                <div class="text-xs text-gray-400">SOL</div>
+                            </div>
+                        </div>
+                        <div class="w-6 h-6 border border-gray-600 rounded-full"></div>
+                    </div>
+
+                    <!-- Kaspa - Selected -->
+                    <div class="flex items-center justify-between bg-blue-500 bg-opacity-10 border border-blue-500 rounded-xl p-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">K</div>
+                            <div>
+                                <div class="font-medium">Kaspa</div>
+                                <div class="text-xs text-gray-400">KAS</div>
+                            </div>
+                        </div>
+                        <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- More projects... -->
+                    <div class="flex items-center justify-between bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl p-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold">LINK</div>
+                            <div>
+                                <div class="font-medium">Chainlink</div>
+                                <div class="text-xs text-gray-400">LINK</div>
+                            </div>
+                        </div>
+                        <div class="w-6 h-6 border border-gray-600 rounded-full"></div>
+                    </div>
+                </div>
+
+                <!-- Continue Button -->
+                <button class="w-full bg-blue-500 text-white py-4 rounded-lg font-medium mt-6">
+                    Continue (3 selected)
+                </button>
+            </div>
+            <div class="text-center pb-4">
+                <p class="text-xs text-gray-600">3. Project Selection</p>
+            </div>
+        </div>
+
+        <!-- 4. Importance Threshold -->
+        <div class="phone-frame midnight-gradient">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            <div class="h-full flex flex-col p-6 text-white">
+                <!-- Header -->
+                <div class="mb-12">
+                    <h1 class="text-xl font-light mb-2">Set Alert Threshold</h1>
+                    <p class="text-sm text-gray-400">Only see what matters most</p>
+                </div>
+
+                <!-- Main Content -->
+                <div class="flex-1">
+                    <!-- Current Value Display -->
+                    <div class="text-center mb-16">
+                        <div class="text-7xl font-thin text-blue-400 mb-4">9</div>
+                        <p class="text-sm text-gray-400">Importance score</p>
+                    </div>
+
+                    <!-- Slider -->
+                    <div class="mb-16">
+                        <div class="relative">
+                            <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full slider-track" style="width: 90%"></div>
+                            </div>
+                            <div class="absolute top-1/2 -translate-y-1/2" style="left: 90%">
+                                <div class="w-6 h-6 bg-blue-500 rounded-full shadow-lg"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-xs text-gray-500">
+                            <span>1</span>
+                            <span>5</span>
+                            <span>10</span>
+                        </div>
+                    </div>
+
+                    <!-- Explanation -->
+                    <div class="bg-gray-800 bg-opacity-50 rounded-xl p-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mt-1">
+                                <span class="text-blue-400">i</span>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-300 mb-2">
+                                    With a threshold of 9, you'll only receive notifications for the most critical updates.
+                                </p>
+                                <p class="text-xs text-gray-500">
+                                    Typically 1-3 alerts per week across your selected projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue Button -->
+                <button class="w-full bg-blue-500 text-white py-4 rounded-lg font-medium">
+                    Continue
+                </button>
+            </div>
+            <div class="text-center pb-4">
+                <p class="text-xs text-gray-600">4. Importance Threshold</p>
+            </div>
+        </div>
+
+        <!-- 5. Telegram Connection -->
+        <div class="phone-frame midnight-gradient">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            <div class="h-full flex flex-col p-6 text-white">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h1 class="text-xl font-light mb-2">Connect Telegram</h1>
+                    <p class="text-sm text-gray-400">Get instant notifications</p>
+                </div>
+
+                <!-- Main Content -->
+                <div class="flex-1 flex flex-col justify-center">
+                    <!-- Telegram Icon -->
+                    <div class="text-center mb-12">
+                        <div class="w-24 h-24 bg-blue-500 bg-opacity-10 border border-blue-400 rounded-3xl mx-auto mb-6 flex items-center justify-center">
+                            <svg class="w-12 h-12 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.68c.223-.198-.054-.308-.346-.11l-6.4 4.02-2.76-.918c-.6-.187-.612-.6.125-.89l10.782-4.156c.5-.18.94.12.78.88z"/>
+                            </svg>
+                        </div>
+                        
+                        <h2 class="text-lg font-light mb-4">How it works</h2>
+                        
+                        <div class="space-y-4 text-sm text-gray-400">
+                            <div class="flex items-center space-x-3">
+                                <div class="text-blue-400">1.</div>
+                                <p class="text-left">Click connect below</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="text-blue-400">2.</div>
+                                <p class="text-left">Open the link in Telegram</p>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="text-blue-400">3.</div>
+                                <p class="text-left">Start receiving alerts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Connect Button -->
+                    <button class="w-full bg-blue-500 text-white py-4 rounded-lg font-medium flex items-center justify-center space-x-3">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.68c.223-.198-.054-.308-.346-.11l-6.4 4.02-2.76-.918c-.6-.187-.612-.6.125-.89l10.782-4.156c.5-.18.94.12.78.88z"/>
+                        </svg>
+                        <span>Connect Telegram</span>
+                    </button>
+                </div>
+
+                <!-- Skip Option -->
+                <button class="text-center text-sm text-gray-500 py-4">
+                    Skip for now
+                </button>
+            </div>
+            <div class="text-center pb-4">
+                <p class="text-xs text-gray-600">5. Telegram Connection</p>
+            </div>
+        </div>
+
+        <!-- 6. Main Dashboard (Feed) -->
+        <div class="phone-frame midnight-gradient">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            <div class="h-full flex flex-col text-white">
+                <!-- Header -->
+                <div class="bg-black bg-opacity-30 backdrop-blur p-4 border-b border-gray-800">
+                    <div class="flex items-center justify-between mb-3">
+                        <h1 class="text-lg font-light">MONITOOR</h1>
+                        <div class="flex items-center space-x-3">
+                            <div class="relative">
+                                <div class="w-2 h-2 bg-green-500 rounded-full absolute -top-1 -right-1"></div>
+                                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                </svg>
+                            </div>
+                            <button>
+                                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats Bar -->
+                    <div class="flex justify-between text-center">
+                        <div>
+                            <div class="text-sm font-medium">23</div>
+                            <div class="text-xs text-gray-500">Today</div>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-blue-400">9/10</div>
+                            <div class="text-xs text-gray-500">Threshold</div>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium">3</div>
+                            <div class="text-xs text-gray-500">Projects</div>
+                        </div>
+                        <div>
+                            <div class="text-sm font-medium text-green-400">●</div>
+                            <div class="text-xs text-gray-500">Live</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feed -->
+                <div class="flex-1 overflow-y-auto p-4 space-y-4">
+                    <!-- Tweet Card - New -->
+                    <div class="bg-gray-800 bg-opacity-50 rounded-xl p-4 border border-blue-500 border-opacity-30">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">₿</div>
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-2">
+                                    <div>
+                                        <h3 class="font-medium">Bitcoin</h3>
+                                        <p class="text-xs text-gray-400">3 minutes ago</p>
+                                    </div>
+                                    <div class="bg-red-500 bg-opacity-20 text-red-400 text-xs px-2 py-1 rounded-full">
+                                        Score: 9
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    BREAKING: Major institutional adoption announcement - Fortune 500 company allocating $500M to Bitcoin treasury reserves.
+                                </p>
+                                <button class="text-xs text-blue-400">View on Twitter →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tweet Card -->
+                    <div class="bg-gray-800 bg-opacity-50 rounded-xl p-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">Ξ</div>
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-2">
+                                    <div>
+                                        <h3 class="font-medium">Ethereum</h3>
+                                        <p class="text-xs text-gray-400">17 minutes ago</p>
+                                    </div>
+                                    <div class="bg-orange-500 bg-opacity-20 text-orange-400 text-xs px-2 py-1 rounded-full">
+                                        Score: 8
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    Ethereum Foundation announces major protocol upgrade timeline. EIP-4844 implementation accelerated.
+                                </p>
+                                <button class="text-xs text-blue-400">View on Twitter →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More tweets... -->
+                    <div class="bg-gray-800 bg-opacity-50 rounded-xl p-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">K</div>
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-2">
+                                    <div>
+                                        <h3 class="font-medium">Kaspa</h3>
+                                        <p class="text-xs text-gray-400">1 hour ago</p>
+                                    </div>
+                                    <div class="bg-yellow-500 bg-opacity-20 text-yellow-400 text-xs px-2 py-1 rounded-full">
+                                        Score: 7
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-300 mb-3">
+                                    New exchange listing confirmed. Trading begins next week on major Asian exchange.
+                                </p>
+                                <button class="text-xs text-blue-400">View on Twitter →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Tab Bar -->
+                <div class="bg-black bg-opacity-30 backdrop-blur border-t border-gray-800 p-2">
+                    <div class="flex justify-around">
+                        <button class="flex flex-col items-center p-2 text-blue-400">
+                            <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 20a10 10 0 110-20 10 10 0 010 20zm1-11H9v4h2V9zm0-2H9V5h2v2z"/>
+                            </svg>
+                            <span class="text-xs">Feed</span>
+                        </button>
+                        <button class="flex flex-col items-center p-2 text-gray-500">
+                            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                            <span class="text-xs">Projects</span>
+                        </button>
+                        <button class="flex flex-col items-center p-2 text-gray-500">
+                            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                            <span class="text-xs">Profile</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pb-4">
+                <p class="text-xs text-gray-600">6. Main Dashboard</p>
+            </div>
+        </div>
+
+        <!-- 7. Projects Management -->
+        <div class="phone-frame midnight-gradient">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            <div class="h-full flex flex-col text-white">
+                <!-- Header -->
+                <div class="bg-black bg-opacity-30 backdrop-blur p-4 border-b border-gray-800">
+                    <h1 class="text-lg font-light mb-2">Manage Projects</h1>
+                    <div class="flex items-center justify-between">
+                        <p class="text-sm text-gray-400">3 of 10 projects selected</p>
+                        <button class="text-sm text-blue-400">Select All</button>
+                    </div>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="flex-1 overflow-y-auto p-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Bitcoin - Active -->
+                        <div class="bg-blue-500 bg-opacity-10 border border-blue-500 rounded-xl p-4 relative">
+                            <div class="absolute top-2 right-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold mb-3">₿</div>
+                            <h3 class="font-medium mb-1">Bitcoin</h3>
+                            <p class="text-xs text-gray-400 mb-2">BTC</p>
+                            <div class="text-xs text-blue-400">5 alerts today</div>
+                        </div>
+
+                        <!-- Ethereum - Active -->
+                        <div class="bg-blue-500 bg-opacity-10 border border-blue-500 rounded-xl p-4 relative">
+                            <div class="absolute top-2 right-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center text-white font-bold mb-3">Ξ</div>
+                            <h3 class="font-medium mb-1">Ethereum</h3>
+                            <p class="text-xs text-gray-400 mb-2">ETH</p>
+                            <div class="text-xs text-blue-400">3 alerts today</div>
+                        </div>
+
+                        <!-- Solana - Inactive -->
+                        <div class="bg-gray-800 bg-opacity-50 border border-gray-700 rounded-xl p-4">
+                            <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold mb-3">◎</div>
+                            <h3 class="font-medium mb-1">Solana</h3>
+                            <p class="text-xs text-gray-400 mb-2">SOL</p>
+                            <div class="text-xs text-gray-500">Not monitoring</div>
+                        </div>
+
+                        <!-- Kaspa - Active -->
+                        <div class="bg-blue-500 bg-opacity-10 border border-blue-500 rounded-xl p-4 relative">
+                            <div class="absolute top-2 right-2">
+                                <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold mb-3">K</div>
+                            <h3 class="font-medium mb-1">Kaspa</h3>
+                            <p class="text-xs text-gray-400 mb-2">KAS</p>
+                            <div class="text-xs text-blue-400">1 alert today</div>
+                        </div>
+
+                        <!-- More projects... -->
+                    </div>
+                </div>
+
+                <!-- Bottom Tab Bar -->
+                <div class="bg-black bg-opacity-30 backdrop-blur border-t border-gray-800 p-2">
+                    <div class="flex justify-around">
+                        <button class="flex flex-col items-center p-2 text-gray-500">
+                            <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 20a10 10 0 110-20 10 10 0 010 20zm1-11H9v4h2V9zm0-2H9V5h2v2z"/>
+                            </svg>
+                            <span class="text-xs">Feed</span>
+                        </button>
+                        <button class="flex flex-col items-center p-2 text-blue-400">
+                            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                            <span class="text-xs">Projects</span>
+                        </button>
+                        <button class="flex flex-col items-center p-2 text-gray-500">
+                            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                            <span class="text-xs">Profile</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pb-4">
+                <p class="text-xs text-gray-600">7. Projects Management</p>
+            </div>
+        </div>
+
+        <!-- 8. Settings/Profile -->
+        <div class="phone-frame midnight-gradient">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+            <div class="h-full flex flex-col text-white">
+                <!-- Header -->
+                <div class="bg-black bg-opacity-30 backdrop-blur p-4 border-b border-gray-800">
+                    <h1 class="text-lg font-light">Settings</h1>
+                </div>
+
+                <!-- Content -->
+                <div class="flex-1 overflow-y-auto p-4 space-y-6">
+                    <!-- Profile Section -->
+                    <div>
+                        <h2 class="text-xs text-gray-500 uppercase tracking-wider mb-3">Account</h2>
+                        <div class="bg-gray-800 bg-opacity-50 rounded-xl">
+                            <div class="p-4 border-b border-gray-700">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="font-medium">user@example.com</p>
+                                        <p class="text-xs text-gray-400">Member since June 2025</p>
+                                    </div>
+                                    <button class="text-xs text-blue-400">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification Settings -->
+                    <div>
+                        <h2 class="text-xs text-gray-500 uppercase tracking-wider mb-3">Notifications</h2>
+                        <div class="bg-gray-800 bg-opacity-50 rounded-xl divide-y divide-gray-700">
+                            <div class="p-4 flex items-center justify-between">
+                                <div>
+                                    <p class="font-medium">Alert Threshold</p>
+                                    <p class="text-xs text-gray-400">Currently set to 9</p>
+                                </div>
+                                <button class="text-blue-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4 flex items-center justify-between">
+                                <div>
+                                    <p class="font-medium">Telegram</p>
+                                    <p class="text-xs text-green-400">Connected to @username</p>
+                                </div>
+                                <button class="text-gray-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="p-4 flex items-center justify-between">
+                                <div>
+                                    <p class="font-medium">Push Notifications</p>
+                                    <p class="text-xs text-gray-400">Browser notifications</p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-500"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Section -->
+                    <div>
+                        <h2 class="text-xs text-gray-500 uppercase tracking-wider mb-3">About</h2>
+                        <div class="bg-gray-800 bg-opacity-50 rounded-xl divide-y divide-gray-700">
+                            <button class="w-full p-4 flex items-center justify-between text-left">
+                                <span>Help & Support</span>
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                            <button class="w-full p-4 flex items-center justify-between text-left">
+                                <span>Terms of Service</span>
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                            <button class="w-full p-4 flex items-center justify-between text-left">
+                                <span>Privacy Policy</span>
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sign Out -->
+                    <button class="w-full bg-red-500 bg-opacity-10 border border-red-500 text-red-400 py-4 rounded-lg">
+                        Sign Out
+                    </button>
+                </div>
+
+                <!-- Bottom Tab Bar -->
+                <div class="bg-black bg-opacity-30 backdrop-blur border-t border-gray-800 p-2">
+                    <div class="flex justify-around">
+                        <button class="flex flex-col items-center p-2 text-gray-500">
+                            <svg class="w-6 h-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 20a10 10 0 110-20 10 10 0 010 20zm1-11H9v4h2V9zm0-2H9V5h2v2z"/>
+                            </svg>
+                            <span class="text-xs">Feed</span>
+                        </button>
+                        <button class="flex flex-col items-center p-2 text-gray-500">
+                            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                            <span class="text-xs">Projects</span>
+                        </button>
+                        <button class="flex flex-col items-center p-2 text-blue-400">
+                            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                            <span class="text-xs">Profile</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pb-4">
+                <p class="text-xs text-gray-600">8. Settings/Profile</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Flow Summary -->
+    <div class="max-w-6xl mx-auto mt-12 bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">User Flow Summary</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="space-y-2">
+                <h3 class="font-semibold text-blue-600">1. Onboarding</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• Landing page with dot progression</li>
+                    <li>• Quick sign up flow</li>
+                    <li>• Email/password only</li>
+                </ul>
+            </div>
+            
+            <div class="space-y-2">
+                <h3 class="font-semibold text-blue-600">2. Configuration</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• Select projects (3 minimum)</li>
+                    <li>• Set importance threshold</li>
+                    <li>• Connect Telegram (optional)</li>
+                </ul>
+            </div>
+            
+            <div class="space-y-2">
+                <h3 class="font-semibold text-blue-600">3. Main Experience</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• Real-time tweet feed</li>
+                    <li>• Score-based filtering</li>
+                    <li>• Quick project management</li>
+                </ul>
+            </div>
+            
+            <div class="space-y-2">
+                <h3 class="font-semibold text-blue-600">4. Settings</h3>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• Adjust threshold anytime</li>
+                    <li>• Manage notifications</li>
+                    <li>• Account settings</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+            <h3 class="font-semibold text-blue-800 mb-2">Key Design Principles</h3>
+            <ul class="text-sm text-blue-700 space-y-1">
+                <li>✓ Midnight blue aesthetic throughout</li>
+                <li>✓ Minimal, focused interface</li>
+                <li>✓ Clear importance scoring visible</li>
+                <li>✓ Real-time updates with live indicator</li>
+                <li>✓ Quick access to all key features</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
